@@ -17,6 +17,12 @@ jobs:
       - name: Download ShiftLeft CLI
         run: |
           curl https://cdn.shiftleft.io/download/sl > ./sl && chmod a+rx ./sl
+
+      - name: Gradle Build
+        shell: bash
+        run: |
+          gradle build
+
   
       - name: Run sl analyze
         shell: bash
