@@ -18,7 +18,7 @@ jobs:
         run: |
           curl https://cdn.shiftleft.io/download/sl > ./sl && chmod a+rx ./sl
   
-      - name: Run sl analyze 1
+      - name: Run sl analyze
         shell: bash
         run: |
           ./sl analyze --verbose --app "${GITHUB_REPOSITORY_OWNER}_${GITHUB_REPOSITORY#*/}" .
